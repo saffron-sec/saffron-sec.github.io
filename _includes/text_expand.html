@@ -1,0 +1,32 @@
+<script>
+
+    var elements = document.querySelectorAll('p');
+    Array.prototype.forEach.call(elements, function(el, i){
+        if(el.innerHTML.indexOf("[expand]") !== -1) {
+            var parentcontent = el.parentNode.innerHTML.replace('[expand]','<span class="expand" style="display: none; height: 0; overflow: hidden;">').replace('[/expand]','</span>');
+            el.parentNode.innerHTML = parentcontent;
+        }
+    });
+
+    var elements = document.querySelectorAll('span.expand');
+    Array.prototype.forEach.call(elements, function(el, i){
+      el.parentElement.innerHTML = el.parentElement.innerHTML + '<span>..&nbsp; <a style="cursor: pointer;" onclick="showMore(this)">read&nbsp;more&nbsp;&rarr;</a></span><span style="display: none;"><a style="cursor: pointer;" onclick="showLess(this)">read&nbsp;less&nbsp;&larr;</a></span>';
+    });
+
+    function showMore(elem) {
+      elem.parentElement.previousSibling.style.display = 'inline';
+      elem.parentElement.previousSibling.style.height = 'auto';
+      elem.parentElement.style.display = 'none';
+      elem.parentElement.nextSibling.style.display = "inline";
+      return false;
+    }
+
+    function showLess(elem) {
+      elem.parentElement.previousSibling.previousSibling.style.display = 'none';
+      elem.parentElement.previousSibling.previousSibling.style.height = 'auto';
+      elem.parentElement.style.display = 'none';
+      elem.parentElement.previousSibling.style.display = "inline";
+      return false;
+    }
+
+</script>

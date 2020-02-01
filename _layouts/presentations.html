@@ -1,0 +1,17 @@
+---
+layout: page
+---
+
+{{content}}
+
+{% for presentation in site.presentations reversed %}
+<header>
+  <h4 class="page-title">{{ presentation.title }} - {{ presentation.date | date: "%Y-%m-%d"}}</h1>
+</header>
+<div class="">
+  <img width="100px" src="{{ "/assets/images/" | append: presentation.image | relative_url}}">
+  {{ presentation.content }}
+</div>
+{% endfor %}
+
+{% include text_expand.html %}

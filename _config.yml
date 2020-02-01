@@ -1,0 +1,39 @@
+# Dependencies
+markdown:         kramdown
+highlighter:      rouge
+
+# Setup
+title:            Saher Naumaan
+tagline:          'Cyber Security'
+description:      'Threat intelligence analyst'
+baseurl:          ''
+
+author:
+  name:           'Tom King'
+  url:            https://twitter.com/quazums
+
+paginate:         5
+
+keybase:
+  url: "https://keybase.io/sahernaumaan"
+
+twitter:
+  url: "https://twitter.com/saffronsec"
+
+linkedin:
+  url: "https://www.linkedin.com/in/sahernaumaan/"
+
+email: sahara.sec-at-protonmail-dot-com
+
+plugins:
+
+collections:
+  - awards
+  - press
+  - presentations
+  - publications
+
+collections_dir: content
+
+# Sidebar link settings
+sidebar_home_link:  true

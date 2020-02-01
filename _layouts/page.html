@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{% if page.banner_image %}
+<img id="content-banner" src={{ "/assets/images/" | append: page.banner_image | relative_url }}>
+{% endif %}
+{% if page.hide_title != true %}
+<header>
+  <h1 class="page-title">{{ page.title }}</h1>
+</header>
+{% endif %}
+<div class="content">
+  {{ content }}
+</div>

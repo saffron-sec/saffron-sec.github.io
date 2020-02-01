@@ -1,0 +1,15 @@
+---
+layout: page
+---
+
+{{content}}
+
+{% for award in site.awards reversed %}
+<header>
+  <h4 class="page-title">{{ award.title }} - {{ award.date | date: "%B %Y"}}</h4>
+</header>
+<div class="">
+  <img width="100px" src="{{ "/assets/images/" | append: award.image | relative_url}}">
+  {{ award.content }}
+</div>
+{% endfor %}
