@@ -4,11 +4,15 @@ layout: page
 
 {{content}}
 
+<br />
+
 {% for publication in site.publications reversed %}
 <header>
-  <h4 class="page-title"><a href={{publication.ref}}>{{ publication.title }} - {{ publication.date | date: "%B %Y"}}</a></h4>
+  <h4><a href={{publication.ref}}>{{ publication.title }}</a></h4>
 </header>
 <div>
-  {{ publication.source }}{% if publication.content.size > 5 %} - {{ publication.content }}{% endif %}
+  <p>{{ publication.source }}, {{ publication.date | date: "%B %Y"}}</p>
+  {% if publication.content.size > 5 %}{{ publication.content }}{% endif %}
 </div>
+<hr>
 {% endfor %}

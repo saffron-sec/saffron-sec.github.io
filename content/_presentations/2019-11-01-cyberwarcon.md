@@ -1,0 +1,8 @@
+---
+image: cyberwarcon.png
+conference: CYBERWARCON
+title: "Iran Plays its Trumps"
+---
+Iran has shown its capacity for destructive operations over the last several years, whether signalling capability or carrying out disruptive/destructive attacks (Shamoon, StoneDrill, Sands Casino, Operation Ababil). [expand]
+The target profile of Iranian threat groups such as APT33 is aerospace, defence, and energy organizations, some of which have suffered destructive attacks but primarily been the victims of espionage operations. In many cases, the use of destructive capabilities has remained confined to regional targets – mostly Saudi and other Gulf organizations – and often tends to be retaliatory. However we have also seen Iranian threat groups go after US targets and while mostly restrained, the espionage campaigns could suggest potential reconnaissance for future operations. Recent escalating tensions in the US-Iran relationship, the increasing pressure on the Iranian economy, and the restructuring of the Iranian intelligence apparatus (hawkish IRGC leadership and more power to the IRGC Intelligence Organization) could signal that the risk calculus has changed. Iran may be increasingly willing to launch disruptive attacks due to the back and forth engagement with the US and its allies over 2019, both through kinetic and cyber operations. This presentation will cover Iran’s historical destructive capabilities, an analysis of the US-Iran hostilities and APT33 activity in 2019, domestic intelligence developments in Iran, and potential effects on the intentions and inclinations of Iranian threat actors for further destructive attacks.
+[/expand]

@@ -1,6 +1,6 @@
 ---
-title: "The Empty Promise of State-Sponsored Feminism in the Arabian Peninsula"
-ref: https://www.jadaliyya.com/Details/30738/The-Empty-Promise-of-State-Sponsored-Feminism-in-the-Arabian-Peninsula
-source: Jadaliyya
+title: "Pakistan: drones and duplicity"
+ref: https://www.opendemocracy.net/en/opensecurity/pakistan-drones-and-duplicity/
+source: openDemocracy
 type: article
 ---

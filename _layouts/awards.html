@@ -5,11 +5,22 @@ layout: page
 {{content}}
 
 {% for award in site.awards reversed %}
+<img width="100px" src="{{ "/assets/images/" | append: award.image | relative_url}}">
 <header>
-  <h4 class="page-title">{{ award.title }} - {{ award.date | date: "%B %Y"}}</h4>
+  <h4 class="page-title">{{ award.title }}, {{ award.date | date: "%B %Y"}}</h4>
 </header>
 <div class="">
-  <img width="100px" src="{{ "/assets/images/" | append: award.image | relative_url}}">
   {{ award.content }}
 </div>
+<hr>
+{% endfor %}
+
+{% for article in site.press reversed %}
+<header>
+  <h4><a href={{article.ref}}>{{ article.title }}</a></h4>
+</header>
+<div>
+  <p>{{ article.source }}, {{ article.date | date: "%B %Y"}}</p>
+</div>
+<hr>
 {% endfor %}

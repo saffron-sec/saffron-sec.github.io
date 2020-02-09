@@ -35,6 +35,10 @@ body {
   min-height: 100vh;
 }
 
+.page-conference-title {
+  margin-top: 0px !important;
+}
+
 #sidebar {
   flex: 0 0 auto;
   padding: $section-spacing $section-spacing 0em $section-spacing;
