@@ -1,9 +1,39 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en-us">
 
-<div class="content">
+  {% include head.html %}
 
-  {{ content }}
-
-</div>
+  <body class="home-canvas">
+    <div id="home-logo">
+      <img src="{{ "/assets/images/logo.png" | relative_url }}" >
+    </div>
+    <div id="home-links">
+      {% assign pages_list = site.pages|sort:"sidebar_sort_order" %}
+      {% assign counter = 0 %}
+      {% assign visiblePages = 0 %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.sidebar_link %}
+            {% assign visiblePages = visiblePages | plus: 1 %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      {% assign remainder_pages = visiblePages | modulo: 3 %}
+      {% assign minCount = visiblePages | minus: remainder_pages %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.sidebar_link %}
+            {% assign counter = counter | plus: 1 %}
+            {% assign isOdd = counter | minus: minCount %}
+          <div class="home-link {% if isOdd >= 1 %} odd-home-link{% endif %}{% if remainder_pages == 1 %}1{% endif %}{% if remainder_pages == 2 %}2{% endif %}">
+            <a class="page-link {% if page.url == node.url %} active{% endif %}"
+                href="{{ node.url | relative_url }}">
+                <div>{{ node.title }}</div>
+            </a>
+          </div>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </body>
+</html>

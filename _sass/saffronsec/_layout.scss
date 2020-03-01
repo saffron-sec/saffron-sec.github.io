@@ -22,13 +22,175 @@
   we want the sidebar or header to stretch.
 */
 
+@mixin scrimGradient($startColor: #FFF, $direction: 'to top') {
+
+  $scrimCoordinates: (
+    0: 1,
+    19: 0.738,
+    34: 0.541,
+    47: 0.382,
+    56.5: 0.278,
+    65: 0.194,
+    73: 0.126,
+    80.2: 0.075,
+    86.1: 0.042,
+    91: 0.021,
+    95.2: 0.008,
+    98.2: 0.002,
+    100: 0
+  );
+
+  $hue: hue($startColor);
+  $saturation: saturation($startColor);
+  $lightness: lightness($startColor);
+  $stops: ();
+
+  @each $colorStop, $alphaValue in $scrimCoordinates {
+    $stop: hsla($hue, $saturation, $lightness, $alphaValue) percentage($colorStop/100);
+    $stops: append($stops, $stop, comma);
+  }
+
+  background-image: linear-gradient(unquote($direction), $stops);
+
+}
+
+#home-logo > img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -250px;
+  min-width: 500px;
+  max-width: 500px;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+$animate: all 0.2s ease-in-out;
+
+
+#home-links {
+  text-align: center;
+  min-width: 100%;
+
+  .page-link {
+    // margin: 0px 20px;
+    color: white;
+  }
+}
+
+.home-link {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin: 0 0 45px;
+    .page-link {
+      text-decoration: none;
+      text-align: center;
+      margin: 0 auto;
+      padding: 0;
+      transition: $animate;
+      position: relative;
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        width: 0px;
+        height: 5px;
+        margin: 5px 0 0;
+        transition: $animate;
+        transition-duration: 0.4s;
+        opacity: 0;
+        background-color: darken(orange,5%);
+      }
+      &.page-link {
+        &:before {
+          left: 50%;
+        }
+        &:after {
+          right: 50%;
+        }
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      .page-link {
+        &:before,
+        &:after {
+          width: 100%;
+          opacity: 1;
+        }
+        &.page-link {
+          &:before,
+          &:after {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+
+
+#home-links:after {
+  display: table;
+  clear: both;
+}
+
+.home-link {
+  width: 33.33%;
+  float: left;
+  padding: 15px;
+  min-height: 5rem;
+}
+
+@media only screen and (min-width: 750px) {
+  .odd-home-link2 {
+    width: 50%;
+  }
+  .odd-home-link1 {
+    width: 100%;
+  }
+  .home-canvas {
+    max-width: 900px;
+    min-width: auto;
+    margin: 0px auto;
+    padding-top: 40vh;
+  }
+}
+
+[class*="col-"] {
+
+  border: 1px solid red;
+}
+
+@media only screen and (max-width: 750px) {
+  #home-logo > img {
+    min-width: 400px;
+    max-width: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+  }
+
+  .home-link {
+    width: 100%;
+  }
+
+  #home-links .home-link:nth-child(odd) {
+    clear: left !important;
+  }
+  .home-canvas {
+    max-width: 600px;
+    min-width: auto;
+    margin: 0px auto;
+    padding-top: 10vh;
+  }
+}
+
 body {
   color: $sidebar-text-color;
-  background-color: $sidebar-bg-color;
-  background-image: linear-gradient(
-    to bottom,
-    lighten($sidebar-bg-color, 7%),
-    darken($sidebar-bg-color, 7%));
+  background-color: lighten($sidebar-bg-color, 7%);
+  @include scrimGradient(darken($sidebar-bg-color, 7%));
   display: flex;
   flex-direction: column;
   min-width: 100vw;
@@ -122,11 +284,11 @@ body {
 
 // Make header elements blend into sidebar / background
 .container > header {
-  color: $sidebar-title-color;
+  color: $gray-6;
   background: transparent;
-  margin: ($heading-spacing - $section-spacing)
+  margin: $section-spacing
           $section-spacing
-          $section-spacing;
+          0;
 
   h1, h2 {
     color: inherit;
