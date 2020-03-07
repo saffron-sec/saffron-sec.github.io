@@ -269,6 +269,16 @@ $animate: all 0.2s ease-in-out;
   }
 }
 
+@media only screen and (min-width: 1201px) {
+  .s6, .m6, .l6, .xl6:first-of-type {
+    border-right: 1px solid lightgrey;
+    padding-right: 25px;
+  }
+  .s6, .m6, .l6, .xl6:last-of-type {
+    padding-left: 25px;
+  }
+}
+
 [class*="col-"] {
   border: 1px solid red;
 }
