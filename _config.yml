@@ -7,6 +7,7 @@ title:            Saher Naumaan
 tagline:          'saffronsec'
 description:      'Threat intelligence analyst'
 baseurl:          ''
+rooturl:          'https://saffronsec.com'
 
 author:
   name:           'Tom King'
