@@ -4,25 +4,37 @@ layout: page
 
 {{content}}
 
-<br />
-
-{% for award in site.awards reversed %}
-<img width="100px" src="{{ "/assets/images/" | append: award.image | relative_url}}">
-<header>
-  <h4 class="page-title">{{ award.title }}, {{ award.date | date: "%B %Y"}}</h4>
-</header>
-<div class="">
-  {{ award.content }}
+<div class="col s12 m12 l12 xl6">
+  <h1 class="page-title">Awards</h1>
+  <br />
+  {% for award in site.awards reversed %}
+  <img width="100px" src="{{ "/assets/images/" | append: award.image | relative_url}}">
+  <header>
+    <h4 class="page-title">
+      {% if award.ref %}
+        <a href={{award.ref}}>{{ award.title }}, {{ award.date | date: "%B %Y"}}</a>
+      {% else %}
+      {{ award.title }}, {{ award.date | date: "%B %Y"}}
+      {% endif %}
+    </h4>
+  </header>
+  <div class="">
+    {{ award.content }}
+  </div>
+  <hr>
+  {% endfor %}
 </div>
-<hr>
-{% endfor %}
 
-{% for article in site.press reversed %}
-<header>
-  <h4><a href={{article.ref}}>{{ article.title }}</a></h4>
-</header>
-<div>
-  <p>{{ article.source }}, {{ article.date | date: "%B %Y"}}</p>
+<div class="col s12 m12 l12 xl6">
+  <h1 class="page-title">Press</h1>
+  <br />
+  {% for article in site.press reversed %}
+  <header>
+    <h4><a href={{article.ref}}>{{ article.title }}</a></h4>
+  </header>
+  <div>
+    <p>{{ article.source }}, {{ article.date | date: "%B %Y"}}</p>
+  </div>
+  <hr>
+  {% endfor %}
 </div>
-<hr>
-{% endfor %}

@@ -17,7 +17,12 @@
 </div>
 <div id="sidebar-footer">
   <div id="sidebar-email">
-    {% include svg/email.svg %} {{ site.email }}
+    <div id="sidebar-email-icon">
+      {% include svg/email.svg %}
+    </div>
+    <div id="sidebar-email-text">
+      {{ site.email }}
+    </div>
   </div>
   {% include sidebar-icon-links.html %}
 </div>

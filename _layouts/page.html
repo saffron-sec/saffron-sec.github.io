@@ -7,9 +7,9 @@ layout: default
 {% endif %}
 {% if page.hide_title != true %}
 <header>
-  <h1 class="page-title">{{ page.title }}</h1>
+  <h1 class="page-title">{% if page.fixed_title %}{{ page.fixed_title }}{% else %}{{ page.title }}{% endif %}</h1>
 </header>
 {% endif %}
-<div class="content">
+<div class="content{% if page.full_width %} full-width{% endif %}">
   {{ content }}
 </div>
