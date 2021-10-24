@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/sahernaumaan
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://saffronsec.com
+  * I am sahernaumaan (https://keybase.io/sahernaumaan) on keybase.
+  * I have a public key ASAJc36pr86ihLadGV6Dd_p5NA76S1jJxRPo_66pK5kGUAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012009737ea9afcea284b69d195e8377fa79340efa4b58c9c513e8ffaea92b9906500a",
+      "host": "keybase.io",
+      "kid": "012009737ea9afcea284b69d195e8377fa79340efa4b58c9c513e8ffaea92b9906500a",
+      "uid": "cb64a0cd7ea548d58d39c86f740ae319",
+      "username": "sahernaumaan"
+    },
+    "merkle_root": {
+      "ctime": 1635067520,
+      "hash": "39d586a5e9517dcc99d2790d4a84a192900a4e7b97a5177df10673369264dba753e6c88f82141d0d05e2085949dc90ec527cf36e5e4915489a151d00d5b2438d",
+      "hash_meta": "96008ba77660c1d585b41d5e37ec36b18d0bb62cc33cf9cd5675b948d64f7b0a",
+      "seqno": 21051703
+    },
+    "service": {
+      "entropy": "8Fr+xb3ripq7jPidhyS5dShC",
+      "hostname": "saffronsec.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.8.0"
+  },
+  "ctime": 1635067556,
+  "expire_in": 504576000,
+  "prev": "e4130691345226e61e51c3d12934b4f03b085af00c8565614737504065497b79",
+  "seqno": 77,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgCXN+qa/OooS2nRleg3f6eTQO+ktYycUT6P+uqSuZBlAKp3BheWxvYWTESpcCTcQg5BMGkTRSJuYeUcPRKTS08DsIWvAMhWVhRzdQQGVJe3nEIG+lBp80DgRW9rdGca0aY8NFOkcmvQ0WRdNkpv0oy6hdAgHCo3NpZ8RANqOaJ5d8XZDR5D9ORQEFyXZWkJn+CNC9kpepFAEQIspnSHhZaE6355/76xeIgwXXVQf8fOPUHlaMXfPv8i/iAahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJQ71zoBDCYRZdbHlKjx+MF6+A+vJnF3LtBDtbpAcuBdo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/sahernaumaan
+
+==================================================================
